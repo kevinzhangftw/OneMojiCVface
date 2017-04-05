@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <facerec-Swift.h>
 
 @interface FJLiveCameraViewController : UIViewController
 

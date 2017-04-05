@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A40B03C1E948CDF008715FE /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40B03B1E948CDF008715FE /* VC.swift */; };
 		871018331A841928000CEDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8710181F1A841928000CEDBD /* AppDelegate.m */; };
 		871018341A841928000CEDBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 871018201A841928000CEDBD /* LaunchScreen.xib */; };
 		871018351A841928000CEDBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871018221A841928000CEDBD /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1986BAD679DE6E19B4FAF424 /* Pods-opencv-facerec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-facerec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-facerec/Pods-opencv-facerec.debug.xcconfig"; sourceTree = "<group>"; };
+		2A40B03A1E948CDF008715FE /* opencv-facerec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "opencv-facerec-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A40B03B1E948CDF008715FE /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		47A50C0BA07F8CFD52D30073 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6358370C65B537E4894DEFF9 /* Pods-opencv-facerec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-facerec.release.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-facerec/Pods-opencv-facerec.release.xcconfig"; sourceTree = "<group>"; };
 		70A5E7535BA0C31A438E84CE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,10 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				871018221A841928000CEDBD /* Main.storyboard */,
+				2A40B03B1E948CDF008715FE /* VC.swift */,
 				871018261A841928000CEDBD /* FJFaceRecognitionViewController.h */,
 				871018271A841928000CEDBD /* FJFaceRecognitionViewController.m */,
 				871018311A841928000CEDBD /* FJLiveCameraViewController.h */,
 				871018321A841928000CEDBD /* FJLiveCameraViewController.m */,
+				2A40B03A1E948CDF008715FE /* opencv-facerec-Bridging-Header.h */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				TargetAttributes = {
 					872C48E61A69251A001BD610 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -260,7 +266,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F570683AB5E35E7AE533C528 /* [CP] Copy Pods Resources */ = {
@@ -289,6 +295,7 @@
 				8710183D1A841928000CEDBD /* main.m in Sources */,
 				871018361A841928000CEDBD /* FJFaceDetector.mm in Sources */,
 				871018371A841928000CEDBD /* FJFaceRecognitionViewController.m in Sources */,
+				2A40B03C1E948CDF008715FE /* VC.swift in Sources */,
 				871018381A841928000CEDBD /* FJFaceRecognizer.mm in Sources */,
 				8710183E1A841928000CEDBD /* UIImage+OpenCV.mm in Sources */,
 				871018331A841928000CEDBD /* AppDelegate.m in Sources */,
@@ -400,9 +407,15 @@
 			baseConfigurationReference = 1986BAD679DE6E19B4FAF424 /* Pods-opencv-facerec.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceRec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = facerec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceRec/opencv-facerec-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -411,9 +424,14 @@
 			baseConfigurationReference = 6358370C65B537E4894DEFF9 /* Pods-opencv-facerec.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceRec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_MODULE_NAME = facerec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FaceRec/opencv-facerec-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
