@@ -8,8 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2A40B03C1E948CDF008715FE /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40B03B1E948CDF008715FE /* VC.swift */; };
+		2AF5809F1E972902004BEB08 /* ObjcBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2AF5809E1E972902004BEB08 /* ObjcBridge.mm */; };
+		2AF580A21E972BAA004BEB08 /* VersionPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580A01E972BAA004BEB08 /* VersionPrinter.cpp */; };
+		2AF580BA1E974057004BEB08 /* ButtonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B11E974057004BEB08 /* ButtonsVC.swift */; };
+		2AF580BB1E974057004BEB08 /* CamVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B21E974057004BEB08 /* CamVC.swift */; };
+		2AF580BC1E974057004BEB08 /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B31E974057004BEB08 /* ContainerVC.swift */; };
+		2AF580BD1E974057004BEB08 /* CoreImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B41E974057004BEB08 /* CoreImageHelper.swift */; };
+		2AF580BE1E974057004BEB08 /* enum Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B51E974057004BEB08 /* enum Emoji.swift */; };
+		2AF580BF1E974057004BEB08 /* extension UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B61E974057004BEB08 /* extension UIImage.swift */; };
+		2AF580C01E974057004BEB08 /* InspectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B71E974057004BEB08 /* InspectionVC.swift */; };
+		2AF580C11E974057004BEB08 /* RecognizeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B81E974057004BEB08 /* RecognizeVC.swift */; };
+		2AF580C21E974057004BEB08 /* TrainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF580B91E974057004BEB08 /* TrainVC.swift */; };
+		5B0ED35CB83A2EE7FC06CD02 /* Pods_opencv_facerec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B6651781066F95438C36663 /* Pods_opencv_facerec.framework */; };
 		871018331A841928000CEDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8710181F1A841928000CEDBD /* AppDelegate.m */; };
-		871018341A841928000CEDBD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 871018201A841928000CEDBD /* LaunchScreen.xib */; };
 		871018351A841928000CEDBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871018221A841928000CEDBD /* Main.storyboard */; };
 		871018361A841928000CEDBD /* FJFaceDetector.mm in Sources */ = {isa = PBXBuildFile; fileRef = 871018251A841928000CEDBD /* FJFaceDetector.mm */; };
 		871018371A841928000CEDBD /* FJFaceRecognitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871018271A841928000CEDBD /* FJFaceRecognitionViewController.m */; };
@@ -21,19 +32,31 @@
 		8710183D1A841928000CEDBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8710182E1A841928000CEDBD /* main.m */; };
 		8710183E1A841928000CEDBD /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 871018301A841928000CEDBD /* UIImage+OpenCV.mm */; };
 		8710183F1A841928000CEDBD /* FJLiveCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871018321A841928000CEDBD /* FJLiveCameraViewController.m */; };
-		FE12FC24DB0804071032E86A /* libPods-opencv-facerec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDDCA62108803A728EB4810 /* libPods-opencv-facerec.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1986BAD679DE6E19B4FAF424 /* Pods-opencv-facerec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-facerec.debug.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-facerec/Pods-opencv-facerec.debug.xcconfig"; sourceTree = "<group>"; };
 		2A40B03A1E948CDF008715FE /* opencv-facerec-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "opencv-facerec-Bridging-Header.h"; sourceTree = "<group>"; };
 		2A40B03B1E948CDF008715FE /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
+		2AF5809D1E972894004BEB08 /* ObjcBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBridge.h; sourceTree = "<group>"; };
+		2AF5809E1E972902004BEB08 /* ObjcBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjcBridge.mm; sourceTree = "<group>"; };
+		2AF580A01E972BAA004BEB08 /* VersionPrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VersionPrinter.cpp; sourceTree = "<group>"; };
+		2AF580A11E972BAA004BEB08 /* VersionPrinter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VersionPrinter.hpp; sourceTree = "<group>"; };
+		2AF580B11E974057004BEB08 /* ButtonsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonsVC.swift; sourceTree = "<group>"; };
+		2AF580B21E974057004BEB08 /* CamVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CamVC.swift; sourceTree = "<group>"; };
+		2AF580B31E974057004BEB08 /* ContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		2AF580B41E974057004BEB08 /* CoreImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreImageHelper.swift; sourceTree = "<group>"; };
+		2AF580B51E974057004BEB08 /* enum Emoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "enum Emoji.swift"; sourceTree = "<group>"; };
+		2AF580B61E974057004BEB08 /* extension UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "extension UIImage.swift"; sourceTree = "<group>"; };
+		2AF580B71E974057004BEB08 /* InspectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspectionVC.swift; sourceTree = "<group>"; };
+		2AF580B81E974057004BEB08 /* RecognizeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecognizeVC.swift; sourceTree = "<group>"; };
+		2AF580B91E974057004BEB08 /* TrainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainVC.swift; sourceTree = "<group>"; };
+		2B6651781066F95438C36663 /* Pods_opencv_facerec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_opencv_facerec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47A50C0BA07F8CFD52D30073 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6358370C65B537E4894DEFF9 /* Pods-opencv-facerec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-opencv-facerec.release.xcconfig"; path = "Pods/Target Support Files/Pods-opencv-facerec/Pods-opencv-facerec.release.xcconfig"; sourceTree = "<group>"; };
 		70A5E7535BA0C31A438E84CE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8710181E1A841928000CEDBD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8710181F1A841928000CEDBD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		871018211A841928000CEDBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		871018231A841928000CEDBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		871018241A841928000CEDBD /* FJFaceDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJFaceDetector.h; sourceTree = "<group>"; };
 		871018251A841928000CEDBD /* FJFaceDetector.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FJFaceDetector.mm; sourceTree = "<group>"; };
@@ -51,7 +74,6 @@
 		871018311A841928000CEDBD /* FJLiveCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJLiveCameraViewController.h; sourceTree = "<group>"; };
 		871018321A841928000CEDBD /* FJLiveCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJLiveCameraViewController.m; sourceTree = "<group>"; };
 		872C48E71A69251A001BD610 /* opencv-facerec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opencv-facerec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BDDCA62108803A728EB4810 /* libPods-opencv-facerec.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-opencv-facerec.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF45A0F0FD4B4534D50EC770 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE12FC24DB0804071032E86A /* libPods-opencv-facerec.a in Frameworks */,
+				5B0ED35CB83A2EE7FC06CD02 /* Pods_opencv_facerec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +93,25 @@
 			isa = PBXGroup;
 			children = (
 				70A5E7535BA0C31A438E84CE /* libPods.a */,
-				8BDDCA62108803A728EB4810 /* libPods-opencv-facerec.a */,
+				2B6651781066F95438C36663 /* Pods_opencv_facerec.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AF580B01E973F6B004BEB08 /* schwifty */ = {
+			isa = PBXGroup;
+			children = (
+				2AF580B11E974057004BEB08 /* ButtonsVC.swift */,
+				2AF580B21E974057004BEB08 /* CamVC.swift */,
+				2AF580B31E974057004BEB08 /* ContainerVC.swift */,
+				2AF580B41E974057004BEB08 /* CoreImageHelper.swift */,
+				2AF580B51E974057004BEB08 /* enum Emoji.swift */,
+				2AF580B61E974057004BEB08 /* extension UIImage.swift */,
+				2AF580B71E974057004BEB08 /* InspectionVC.swift */,
+				2AF580B81E974057004BEB08 /* RecognizeVC.swift */,
+				2AF580B91E974057004BEB08 /* TrainVC.swift */,
+			);
+			name = schwifty;
 			sourceTree = "<group>";
 		};
 		8710181D1A841928000CEDBD /* FaceRec */ = {
@@ -83,6 +121,7 @@
 				8710181F1A841928000CEDBD /* AppDelegate.m */,
 				871018411A8419C1000CEDBD /* OpenCV Wrappers */,
 				871018421A8419D0000CEDBD /* View Controllers */,
+				2AF580B01E973F6B004BEB08 /* schwifty */,
 				871018401A841936000CEDBD /* Supporting Files */,
 				8710182E1A841928000CEDBD /* main.m */,
 				871018431A8419DE000CEDBD /* Categories */,
@@ -93,11 +132,12 @@
 		871018401A841936000CEDBD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				871018201A841928000CEDBD /* LaunchScreen.xib */,
 				8710182A1A841928000CEDBD /* haarcascade_eye_tree_eyeglasses.xml */,
 				8710182B1A841928000CEDBD /* haarcascade_frontalface_alt2.xml */,
 				8710182C1A841928000CEDBD /* Images.xcassets */,
 				8710182D1A841928000CEDBD /* Info.plist */,
+				2AF580A01E972BAA004BEB08 /* VersionPrinter.cpp */,
+				2AF580A11E972BAA004BEB08 /* VersionPrinter.hpp */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,6 +163,8 @@
 				871018311A841928000CEDBD /* FJLiveCameraViewController.h */,
 				871018321A841928000CEDBD /* FJLiveCameraViewController.m */,
 				2A40B03A1E948CDF008715FE /* opencv-facerec-Bridging-Header.h */,
+				2AF5809D1E972894004BEB08 /* ObjcBridge.h */,
+				2AF5809E1E972902004BEB08 /* ObjcBridge.mm */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -227,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				871018341A841928000CEDBD /* LaunchScreen.xib in Resources */,
 				8710183B1A841928000CEDBD /* Images.xcassets in Resources */,
 				8710183C1A841928000CEDBD /* Info.plist in Resources */,
 				871018351A841928000CEDBD /* Main.storyboard in Resources */,
@@ -291,28 +332,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF580BF1E974057004BEB08 /* extension UIImage.swift in Sources */,
+				2AF580C21E974057004BEB08 /* TrainVC.swift in Sources */,
+				2AF580BD1E974057004BEB08 /* CoreImageHelper.swift in Sources */,
+				2AF580BA1E974057004BEB08 /* ButtonsVC.swift in Sources */,
 				8710183F1A841928000CEDBD /* FJLiveCameraViewController.m in Sources */,
 				8710183D1A841928000CEDBD /* main.m in Sources */,
+				2AF580BE1E974057004BEB08 /* enum Emoji.swift in Sources */,
 				871018361A841928000CEDBD /* FJFaceDetector.mm in Sources */,
+				2AF580BB1E974057004BEB08 /* CamVC.swift in Sources */,
+				2AF580A21E972BAA004BEB08 /* VersionPrinter.cpp in Sources */,
 				871018371A841928000CEDBD /* FJFaceRecognitionViewController.m in Sources */,
 				2A40B03C1E948CDF008715FE /* VC.swift in Sources */,
+				2AF580C11E974057004BEB08 /* RecognizeVC.swift in Sources */,
+				2AF5809F1E972902004BEB08 /* ObjcBridge.mm in Sources */,
+				2AF580BC1E974057004BEB08 /* ContainerVC.swift in Sources */,
 				871018381A841928000CEDBD /* FJFaceRecognizer.mm in Sources */,
 				8710183E1A841928000CEDBD /* UIImage+OpenCV.mm in Sources */,
 				871018331A841928000CEDBD /* AppDelegate.m in Sources */,
+				2AF580C01E974057004BEB08 /* InspectionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		871018201A841928000CEDBD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				871018211A841928000CEDBD /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 		871018221A841928000CEDBD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

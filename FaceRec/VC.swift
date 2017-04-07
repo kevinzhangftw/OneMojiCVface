@@ -12,6 +12,8 @@ import UIKit
 @objc class VC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        present(FJFaceRecognitionViewController(), animated: true, completion: nil)
+        print("VC did appear")
+        //call objc 
+        present(ContainerVC(), animated: false, completion: nil)
     }
 }

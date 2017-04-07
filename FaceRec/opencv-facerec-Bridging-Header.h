@@ -3,3 +3,7 @@
 //
 
 #import "FJFaceRecognitionViewController.h"
+
+#import "ObjcBridge.h"
+
+
