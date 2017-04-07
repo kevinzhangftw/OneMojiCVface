@@ -33,16 +33,20 @@ static ObjcBridge *model;
     }
     model->_faceClassifier = createLBPHFaceRecognizer();
     Mat inputMat = [UIImage cvMatFromUIImage: inputImage];//[inputImage cvMatRepresentationGray];
-    
+    Mat greyMat;
+    cvtColor(inputMat, greyMat, CV_BGR2GRAY);
     model->_faceLabels.push_back(label);
-    model->_faceImgs.push_back(inputMat);
+    model->_faceImgs.push_back(greyMat);
     model->_faceClassifier->train(model->_faceImgs, model->_faceLabels);
 }
+
 
 + (int) recognize:(UIImage*) inputImage{
     int emojiClass = 0;
     Mat inputMat = [UIImage cvMatFromUIImage: inputImage];
-    emojiClass = model->_faceClassifier->predict(inputMat);
+    Mat greyMat;
+    cvtColor(inputMat, greyMat, CV_BGR2GRAY);
+    emojiClass = model->_faceClassifier->predict(greyMat);
     return emojiClass;
 }
 

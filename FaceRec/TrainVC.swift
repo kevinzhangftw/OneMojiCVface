@@ -20,7 +20,7 @@ class TrainVC: UIViewController {
   let ovalOverlay = UIView()
   let captureButton = UIButton()
   let dismissButton = UIButton()
-  let instructionPrefix = "Be like -> "
+  let instructionPrefix = ""
   var currentEmoji: Emoji = Emoji(rawValue: "")!
   weak var delegate: TrainVCDelegate?
   override func viewDidLoad() {
@@ -35,7 +35,7 @@ class TrainVC: UIViewController {
     instructionBanner.frame = CGRect(x: 20, y: trainingBanner.frame.maxY, width: view.frame.width - 40, height: 60)
     instructionBanner.backgroundColor = UIColor.black.withAlphaComponent(0.4)
     instructionBanner.textColor = .white
-    instructionBanner.font = UIFont.systemFont(ofSize: 60)
+    instructionBanner.font = UIFont.systemFont(ofSize: 135)
     instructionBanner.textAlignment = .center
     view.addSubview(instructionBanner)
     

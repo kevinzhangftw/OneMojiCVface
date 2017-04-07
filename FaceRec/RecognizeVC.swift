@@ -33,7 +33,7 @@ class RecognizeVC: UIViewController {
     emojiBanner.frame = CGRect(x: 20, y: recognizingBanner.frame.maxY, width: view.frame.width - 40, height: 60)
     emojiBanner.backgroundColor = UIColor.black.withAlphaComponent(0.4)
     emojiBanner.textColor = .white
-    emojiBanner.font = UIFont.systemFont(ofSize: 35)
+    emojiBanner.font = UIFont.systemFont(ofSize: 135)
     emojiBanner.textAlignment = .center
     view.addSubview(emojiBanner)
     
