@@ -32,7 +32,8 @@ static ObjcBridge *model;
         model = [ObjcBridge new];
     }
     model->_faceClassifier = createLBPHFaceRecognizer();
-    Mat inputMat = [inputImage cvMatRepresentationGray];
+    Mat inputMat = [UIImage cvMatFromUIImage: inputImage];//[inputImage cvMatRepresentationGray];
+    
     model->_faceLabels.push_back(label);
     model->_faceImgs.push_back(inputMat);
     model->_faceClassifier->train(model->_faceImgs, model->_faceLabels);
@@ -40,7 +41,7 @@ static ObjcBridge *model;
 
 + (int) recognize:(UIImage*) inputImage{
     int emojiClass = 0;
-    Mat inputMat = [inputImage cvMatRepresentationGray];
+    Mat inputMat = [UIImage cvMatFromUIImage: inputImage];
     emojiClass = model->_faceClassifier->predict(inputMat);
     return emojiClass;
 }

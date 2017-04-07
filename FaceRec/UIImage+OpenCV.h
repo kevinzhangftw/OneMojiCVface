@@ -16,6 +16,8 @@
 @interface UIImage (OpenCV)
 
 + (UIImage *)imageFromCVMat:(cv::Mat)mat;
++ (cv::Mat)cvMatFromUIImage:(UIImage *)image;
+
 
 - (cv::Mat)cvMatRepresentationColor;
 - (cv::Mat)cvMatRepresentationGray;

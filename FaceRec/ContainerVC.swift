@@ -63,13 +63,14 @@ class ContainerVC: UIViewController, CamVCDelegate, ButtonsVCDelegate, TrainVCDe
     switch captureMode {
     case .training:
       let label = EmojiTranslation.mouthPosition(from: trainVC.currentEmoji)
+      ObjcBridge.learn(mouthImage, label: Int32(label.rawValue))
       //emojiLearner.train(mouthImage, label)
       //completion:  
       trainVC.instructNext()
     case .recognizing:
-      let result = 0
+      let label = ObjcBridge.recognize(mouthImage)
       // let result =  emojiLearner.recognize(mouthImage)
-      let mouthPosition = MouthPosition(rawValue: result)!
+      let mouthPosition = MouthPosition(rawValue: Int(label))!
       let recognizedEmoji = EmojiTranslation.emoji(from: mouthPosition, eyePosition: eyePosition)
       recognizeVC.show(emoji: recognizedEmoji)
     default:

@@ -242,6 +242,7 @@
 				TargetAttributes = {
 					872C48E61A69251A001BD610 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 59SVXWFZ98;
 						LastSwiftMigration = 0830;
 					};
 				};
@@ -453,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 59SVXWFZ98;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceRec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_MODULE_NAME = facerec;
@@ -470,6 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 59SVXWFZ98;
 				INFOPLIST_FILE = "$(SRCROOT)/FaceRec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_MODULE_NAME = facerec;
