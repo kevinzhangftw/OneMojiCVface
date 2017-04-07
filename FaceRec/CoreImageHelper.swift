@@ -18,20 +18,33 @@ struct CIDetectionResult {
 struct CoreImageHelper {
 
   static func detect(from image:UIImage) -> CIDetectionResult? {
-    let accuracy = [CIDetectorAccuracy: CIDetectorAccuracyHigh]
+    let detectorOptions = [
+        CIDetectorAccuracy: CIDetectorAccuracyHigh
+    ]
+    
 
     guard let personciImage = CIImage(image: image),
-      let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: nil, options: accuracy) else {
+      let faceDetector = CIDetector(
+        ofType: CIDetectorTypeFace,
+        context: nil,
+        options: detectorOptions) else {
         assert(false, "OOPS")
         return nil
     }
     
     var eyeCounter = 0
-    let faces = faceDetector.features(in:personciImage)
+    let extraOptions = [CIDetectorSmile: true,
+                        CIDetectorEyeBlink: true]
+//    let faces = faceDetector.features(in:personciImage)
+    let faces = faceDetector.features(in:personciImage, options:extraOptions)
     for face in faces as! [CIFaceFeature] {
-      if face.hasLeftEyePosition && !face.leftEyeClosed { eyeCounter += 1 }
-      if face.hasRightEyePosition && !face.rightEyeClosed { eyeCounter += 1 }
-    
+        if face.hasLeftEyePosition && !face.leftEyeClosed {
+            eyeCounter += 1
+        }
+        if face.hasRightEyePosition && !face.rightEyeClosed {
+            eyeCounter += 1
+        }
+        
 //      let faceRect = CGRect(x: face.bounds.minX, y: image.size.height - face.bounds.maxY, width: face.bounds.width, height: face.bounds.height)
 //      return faceRect
 //      

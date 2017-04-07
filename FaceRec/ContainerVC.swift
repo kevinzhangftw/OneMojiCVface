@@ -51,9 +51,12 @@ class ContainerVC: UIViewController, CamVCDelegate, ButtonsVCDelegate, TrainVCDe
     let mouthRect = result.mouthRect
     var eyePosition:EyePosition = .unknown
     switch result.eyeCount {
-    case 0: eyePosition = .bothClosed
-    case 1: eyePosition = .openClosed
-    case 2: eyePosition = .bothOpen
+    case 0:
+        eyePosition = .bothClosed
+    case 1:
+        eyePosition = .openClosed
+    case 2:
+        eyePosition = .bothOpen
     default : assert(false, "OOPS")
     }
     let mouthImage = rotatedImage.crop(mouthRect).resized(to: CGSize(width: 200, height: 134))
